@@ -1,10 +1,11 @@
 require_relative 'person'
 require_relative 'highfiveable'
+require_relative 'apprentice_teacher'
 
-class Teacher < Person
+class Teacher < ApprenticeTeacher
   include Highfiveable
 
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
+  attr_reader :age, :salary, :phase, :target_raise, :performance_rating
   attr_accessor :name
 
   def initialize(options={})
@@ -45,5 +46,9 @@ class Teacher < Person
       response += "feedback, I'll do better next time."
     end
     response
+  end
+
+  def attend_training_session
+    # puts "Whoa. I know ruby-fu"
   end
 end

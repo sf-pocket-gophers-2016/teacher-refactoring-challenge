@@ -1,6 +1,7 @@
 require_relative 'person'
 require_relative 'highfiveable'
 
+
 class ApprenticeTeacher < Person
   include Highfiveable
 
@@ -9,8 +10,8 @@ class ApprenticeTeacher < Person
 
   def initialize(options={})
     super
-    @target_raise = 800
     @phase = 3
+    @target_raise = 800
   end
 
   def set_phase(num)
