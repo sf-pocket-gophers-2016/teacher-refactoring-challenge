@@ -22,6 +22,7 @@ attr_reader :target_raise, :salary
   def receive_raise(raise)
     @salary += raise
   end
+
   def set_performance_rating(rating)
     response = ""
     if rating > self.class::RATING
