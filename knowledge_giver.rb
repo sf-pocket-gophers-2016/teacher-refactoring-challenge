@@ -29,4 +29,22 @@ class KnowledgeGiver < Person
     response
   end
 
+  def teach_stuff
+    name = self.class.name
+    case name
+    when "Teacher"
+      response = ""
+      response += "Listen, class, this is how everything works, fo SHO! "
+      response += "*drops flat-out insane knowledge bomb* "
+      response += "... You're welcome. *saunters away*"
+      response
+    when "ApprenticeTeacher"
+      response = ""
+      response += "Listen, class, this is how everything works. "
+      response += "*drops crazy knowledge bomb* "
+      response += "... You're welcome."
+      response
+    end
+  end
+
 end
