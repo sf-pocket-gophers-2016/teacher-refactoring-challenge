@@ -1,16 +1,11 @@
-class Student
-  attr_reader :age, :phase
-  attr_accessor :name
+require_relative 'school_people'
+require_relative 'learnable'
 
-  def initialize(options = {})
-    @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
-  end
+class Student < School_People
 
-  def offer_high_five
-    "High five!"
-  end
+  PHASE = 1
+
+  include Learnable
 
   def set_phase(num)
     response = ""
@@ -24,10 +19,4 @@ class Student
     response
   end
 
-  def learn_stuff
-    response = ""
-    response += "WHOA! I've never thought of it quite like that before. "
-    response += "Now I feel like a genius!"
-    response
-  end
 end
