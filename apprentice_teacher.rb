@@ -1,8 +1,7 @@
-require_relative 'person'
-require_relative 'phase_settable'
+require_relative 'class_helpers'
 
 class ApprenticeTeacher < Person
-  include PhaseSettable
+  include PhaseSettable, Salaryable
   attr_reader :salary, :target_raise
 
   def initialize(options={})
@@ -17,15 +16,6 @@ class ApprenticeTeacher < Person
     response += "*drops crazy knowledge bomb* "
     response += "... You're welcome."
     response
-  end
-
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
-
-  def receive_raise(raise)
-    @salary += raise
   end
 
   def set_performance_rating(rating)

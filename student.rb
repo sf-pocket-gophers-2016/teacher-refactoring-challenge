@@ -1,6 +1,4 @@
-require_relative 'person'
-require_relative 'phase_settable'
-
+require_relative 'class_helpers'
 
 class Student < Person
 include PhaseSettable
