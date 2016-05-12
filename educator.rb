@@ -4,10 +4,10 @@ require_relative 'high_five'
 class Educator < Person
   attr_reader :salary,:target_raise
 
-def initialize(options={})
-  super
-  @phase = 3
-end
+  def initialize(options={})
+    super
+    @phase = 3
+  end
 
   def set_phase(num)
     @phase = num
@@ -22,6 +22,4 @@ end
   def receive_raise(raise)
     @salary += raise
   end
-
-
 end

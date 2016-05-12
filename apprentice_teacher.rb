@@ -7,7 +7,6 @@ class ApprenticeTeacher < Educator
     @target_raise = 800
   end
 
-
   def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works. "
