@@ -2,11 +2,15 @@ class Teacher
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
 
+DEFAULT_PHASE = 3
+DEFAULT_AGE = 0
+DEFAULT_TARGET_RAISE = 1000
+
   def initialize(options={})
-    @phase = 3
-    @age = options.fetch(:age, 0)
+    @phase = DEFAULT_PHASE
+    @age = options.fetch(:age, DEFAULT_AGE)
     @name = options.fetch(:name, "")
-    @target_raise = 1000
+    @target_raise = self.class::DEFAULT_TARGET_RAISE
   end
 
   def offer_high_five
