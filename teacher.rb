@@ -1,10 +1,19 @@
+require_relative 'teachable'
+require_relative 'highfivable'
+# require_relative 'school'
+
+# Was about to add School to Teacher...
 class Teacher
+
+  include Highfivable
+  include Teachable
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
 
 DEFAULT_PHASE = 3
 DEFAULT_AGE = 0
 DEFAULT_TARGET_RAISE = 1000
+DEFAULT_RATING = 90
 
   def initialize(options={})
     @phase = DEFAULT_PHASE
@@ -22,14 +31,6 @@ DEFAULT_TARGET_RAISE = 1000
     "Cool, I've always wanted to teach phase #{num}!"
   end
 
-  def teach_stuff
-    response = ""
-    response += "Listen, class, this is how everything works, fo SHO! "
-    response += "*drops flat-out insane knowledge bomb* "
-    response += "... You're welcome. *saunters away*"
-    response
-  end
-
   def salary=(new_salary)
     puts "This better be good!"
     @salary = new_salary
@@ -41,7 +42,8 @@ DEFAULT_TARGET_RAISE = 1000
 
   def set_performance_rating(rating)
     response = ""
-    if rating > 90
+    # raise NoMethodError if rating.empty?
+    if rating > self.class::DEFAULT_RATING
       receive_raise(@target_raise)
       response = "Yay, I'm a great employee!"
     else
