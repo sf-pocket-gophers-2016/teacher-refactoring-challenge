@@ -43,12 +43,12 @@ describe Teacher do
     end
 
     it "changes the phase" do
-      jan.set_phase(1)
+      jan.set_phase_teacher(1)
       expect(jan.phase).to be(1)
     end
 
     it "responds with enthusiasm" do
-      response = jan.set_phase(1)
+      response = jan.set_phase_teacher(1)
       expect(response).to eq("Cool, I've always wanted to teach phase 1!")
     end
   end

@@ -7,14 +7,14 @@ describe Student do
     expect(amir.offer_high_five).to eq("High five!")
   end
 
-  context "#set_phase" do
+  context "#set_phase_student" do
     it "responds graciously on phase repeat" do
-      response = amir.set_phase(1)
+      response = amir.set_phase_student(1)
       expect(response).to eq("I'm doing phase 1 again because I put my learning first. I'm gonna rock it!")
     end
 
     it "responds with nervous excitement upon moving up" do
-      response = amir.set_phase(2)
+      response = amir.set_phase_student(2)
       expect(response).to eq("Oooh, phase 2. I hope I'm ready!")
     end
   end
