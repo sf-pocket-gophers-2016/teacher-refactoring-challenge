@@ -1,5 +1,7 @@
-class ApprenticeTeacher
-  attr_reader :age, :salary, :phase, :target_raise
+require_relative 'school_member'
+
+class ApprenticeTeacher < SchoolMember
+  attr_reader :salary, :target_raise
   attr_accessor :name
 
   def initialize(options={})
