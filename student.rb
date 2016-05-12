@@ -1,16 +1,12 @@
-class Student
-  attr_reader :age, :phase
-  attr_accessor :name
+require_relative 'highfivable'
+require_relative 'school'
 
-  def initialize(options = {})
-    @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
-  end
+class Student < School
 
-  def offer_high_five
-    "High five!"
-  end
+  include Highfivable
+
+  DEFAULT_PHASE = 1
+  DEFAULT_AGE = 0
 
   def set_phase(num)
     response = ""
