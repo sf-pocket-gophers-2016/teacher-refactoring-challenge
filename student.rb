@@ -1,4 +1,5 @@
-class Student
+require_relative 'refactor'
+class Student #< Refactor
   attr_reader :age, :phase
   attr_accessor :name
 

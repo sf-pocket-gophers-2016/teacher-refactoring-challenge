@@ -11,7 +11,6 @@ class Teacher < Refactor
   end
 
   def teach_stuff
-
     response = ""
     response += "Listen, class, this is how everything works, fo SHO! "
     response += "*drops flat-out insane knowledge bomb* "
