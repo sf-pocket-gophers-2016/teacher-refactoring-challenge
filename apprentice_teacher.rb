@@ -1,6 +1,7 @@
 require_relative 'instructors'
+require_relative 'high_five'
 
-APPRENTICE_TEACHER_RATING = 80
+PERFORMANCE_RATING = 80
 
 class ApprenticeTeacher < Instructor
   attr_reader :age, :salary, :phase, :target_raise
@@ -15,11 +16,6 @@ class ApprenticeTeacher < Instructor
     "High five!"
   end
 
-  # def set_phase(num)
-  #   @phase = num
-  #   "Cool, I've always wanted to teach phase #{num}!"
-  # end
-
   def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works. "
@@ -28,18 +24,10 @@ class ApprenticeTeacher < Instructor
     response
   end
 
-  # def salary=(new_salary)
-  #   puts "This better be good!"
-  #   @salary = new_salary
-  # end
-
-  # def receive_raise(raise)
-  #   @salary += raise
-  # end
-
+# I wanted to move this off to Instructors but it broke with constants
   def set_performance_rating(rating)
     response = ""
-    if rating > APPRENTICE_TEACHER_RATING
+    if rating > 80
       response = "Yay, I'm a great employee!"
       receive_raise(@target_raise)
     else
