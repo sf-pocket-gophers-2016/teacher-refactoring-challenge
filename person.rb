@@ -1,5 +1,5 @@
 class Person
-  attr_reader :age
+  attr_reader :age, :phase
   attr_accessor :name
 
   def initialize(options = {})

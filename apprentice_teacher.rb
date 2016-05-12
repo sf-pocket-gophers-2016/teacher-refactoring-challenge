@@ -1,7 +1,7 @@
 require_relative 'person'
 
 class ApprenticeTeacher < Person
-  attr_reader :salary, :phase, :target_raise
+  attr_reader :salary, :target_raise
 
   def initialize(options={})
     super
