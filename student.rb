@@ -3,9 +3,8 @@ require_relative 'school_member'
 class Student < SchoolMember
 
   def initialize(options = {})
+    super
     @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
   end
 
   def set_phase(num)
