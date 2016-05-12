@@ -2,8 +2,6 @@ require_relative 'school_member'
 
 class Student < SchoolMember
 
-  attr_accessor :name
-
   def initialize(options = {})
     @phase = 1
     @age = options.fetch(:age, 0)

@@ -2,7 +2,6 @@ require_relative 'school_member'
 
 class Teacher < SchoolMember
   attr_reader :salary, :performance_rating, :target_raise
-  attr_accessor :name
 
   def initialize(options={})
     @phase = 3
