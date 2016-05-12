@@ -1,13 +1,11 @@
 require_relative 'class_helpers'
 
-class ApprenticeTeacher < Person
-  include PhaseSettable, Salaryable
-  attr_reader :salary, :target_raise
+class ApprenticeTeacher < KnowledgeGiver
+  include PhaseSettable, PerformanceRateable
 
   def initialize(options={})
     super
     @target_raise = 800
-    @phase = 3
   end
 
   def teach_stuff

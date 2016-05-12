@@ -67,7 +67,7 @@ describe ApprenticeTeacher do
 
     it "increases salary with a good performance review" do
       rey.salary = 1000000
-      rey.set_performance_rating(85)
+      rey.set_performance_rating_apprentice(85)
       expect(rey.salary).to be(1000800)
     end
   end
@@ -78,12 +78,12 @@ describe ApprenticeTeacher do
     end
 
     it "is gracious" do
-      response = rey.set_performance_rating(15)
+      response = rey.set_performance_rating_apprentice(15)
       expect(response).to eq("Oh, well -- thanks to this actionable, specific, and kind feedback, I'll do better next time.")
     end
 
     it "celebrates good feedback" do
-      response = rey.set_performance_rating(100)
+      response = rey.set_performance_rating_apprentice(100)
       expect(response).to eq("Yay, I'm a great employee!")
     end
   end

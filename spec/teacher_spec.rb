@@ -75,12 +75,12 @@ describe Teacher do
     end
 
     it "does not increase salary with suboptimal review" do
-      jan.set_performance_rating(85)
+      jan.set_performance_rating_teacher(85)
       expect(jan.salary).to be(1000000)
     end
 
     it "increases salary with a good performance review" do
-      jan.set_performance_rating(100)
+      jan.set_performance_rating_teacher(100)
       expect(jan.salary).to be(1001000)
     end
   end
@@ -91,12 +91,12 @@ describe Teacher do
     end
 
     it "is gracious" do
-      response = jan.set_performance_rating(15)
+      response = jan.set_performance_rating_teacher(15)
       expect(response).to eq("Oh, well -- thanks to this actionable, specific, and kind feedback, I'll do better next time.")
     end
 
     it "celebrates good feedback" do
-      response = jan.set_performance_rating(100)
+      response = jan.set_performance_rating_teacher(100)
       expect(response).to eq("Yay, I'm a great employee!")
     end
   end
