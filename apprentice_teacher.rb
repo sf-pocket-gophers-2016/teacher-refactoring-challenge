@@ -1,5 +1,7 @@
 require_relative 'instructors'
 
+APPRENTICE_TEACHER_RATING = 80
+
 class ApprenticeTeacher < Instructor
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
@@ -37,7 +39,7 @@ class ApprenticeTeacher < Instructor
 
   def set_performance_rating(rating)
     response = ""
-    if rating > 80
+    if rating > APPRENTICE_TEACHER_RATING
       response = "Yay, I'm a great employee!"
       receive_raise(@target_raise)
     else
