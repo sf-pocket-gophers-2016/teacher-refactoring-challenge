@@ -1,16 +1,17 @@
-class ApprenticeTeacher
+require_relative 'person'
+require_relative 'highfiveable'
+
+
+class ApprenticeTeacher < Person
+  include Highfiveable
+
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
   def initialize(options={})
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
-    @target_raise = 800
+    super
     @phase = 3
-  end
-
-  def offer_high_five
-    "High five!"
+    @target_raise = 800
   end
 
   def set_phase(num)
