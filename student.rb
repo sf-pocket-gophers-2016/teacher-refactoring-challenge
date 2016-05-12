@@ -1,3 +1,5 @@
+require_relative 'my_shared_module' 
+
 class Student
   attr_reader :age, :phase
   attr_accessor :name
@@ -8,9 +10,7 @@ class Student
     @name = options.fetch(:name, "")
   end
 
-  def offer_high_five
-    "High five!"
-  end
+  include My_Shared_Module
 
   def set_phase(num)
     response = ""
