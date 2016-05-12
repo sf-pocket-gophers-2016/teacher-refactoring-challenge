@@ -1,9 +1,7 @@
 require_relative 'employee'
-require_relative 'cheerable'
 
 class ApprenticeTeacher < Employee
 
-  include Cheerable
 
   def initialize(options={})
     super

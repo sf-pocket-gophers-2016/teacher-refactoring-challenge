@@ -1,9 +1,7 @@
 require_relative 'employee'
-require_relative 'cheerable'
 
 class Teacher < Employee
 
-  include Cheerable
 
   attr_reader :performance_rating
 
