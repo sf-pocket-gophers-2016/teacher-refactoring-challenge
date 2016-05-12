@@ -2,10 +2,10 @@ require_relative 'instructor'
 
 class ApprenticeTeacher < Instructor
 
-
   def initialize(options={})
     super
     @target_raise = 800
+    @phase = 3
   end
 
   def set_performance_rating(rating)
