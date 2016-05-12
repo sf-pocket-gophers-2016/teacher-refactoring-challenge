@@ -3,6 +3,7 @@ class People
 	attr_accessor :name
 
 	def initialize(options={})
+		@phase = 3 # not sure 
 		@age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
 	end

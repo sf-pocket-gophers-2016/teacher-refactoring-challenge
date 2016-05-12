@@ -1,20 +1,14 @@
 require_relative 'refactor'
 require_relative 'teachers_behavior'
-class Teacher < People
 
+class Teacher < People
   include Salary
   attr_reader :salary,:performance_rating, :target_raise
 
   def initialize(options={})
     super
-    @phase = 3
     @target_raise = 1000
   end 
-
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
-  end
 
   def teach_stuff
     response = ""
