@@ -4,16 +4,15 @@ require_relative 'high_five'
 PERFORMANCE_RATING = 90
 
 class Teacher < Instructor
+
+include HighFive
+
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
 
   def initialize(options={})
     super
     @target_raise = 1000
-  end
-
-  def offer_high_five
-    "High five!"
   end
 
   def teach_stuff
