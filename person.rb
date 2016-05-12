@@ -7,7 +7,7 @@ attr_accessor :name
   def initialize(options={})
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
-    @phase = options.fetch(:phase, 1)
+    @phase = options.fetch(:phase, self.class::DEFAULT_PHASE)
   end
 
   def offer_high_five

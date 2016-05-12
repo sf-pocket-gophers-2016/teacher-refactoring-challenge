@@ -1,12 +1,9 @@
 require_relative 'class_helpers'
 
 class ApprenticeTeacher < KnowledgeGiver
-  include PhaseSettable, PerformanceRateable
-
-  def initialize(options={})
-    super
-    @target_raise = 800
-  end
+  include PhaseSettable
+  RATING = 80
+  DEFAULT_TARGET = 800
 
   def teach_stuff
     response = ""

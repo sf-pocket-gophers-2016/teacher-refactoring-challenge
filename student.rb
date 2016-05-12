@@ -2,11 +2,7 @@ require_relative 'class_helpers'
 
 class Student < Person
 include PhaseSettable
-
-  def initialize(options = {})
-    super
-    @phase = 1
-  end
+DEFAULT_PHASE = 1
 
   def learn_stuff
     response = ""
