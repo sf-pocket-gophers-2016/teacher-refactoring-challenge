@@ -1,6 +1,6 @@
-require_relative 'school_member'
+require_relative 'faculty'
 
-class Teacher < SchoolMember
+class Teacher < Faculty
   attr_reader :salary, :performance_rating, :target_raise
 
   def initialize(options={})
