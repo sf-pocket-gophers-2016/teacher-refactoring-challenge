@@ -1,6 +1,10 @@
+require_relative 'high_five'
+
 class Student
   attr_reader :age, :phase
   attr_accessor :name
+
+# include 'offer_high_five'
 
   def initialize(options = {})
     @phase = 1
