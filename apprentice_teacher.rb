@@ -1,9 +1,9 @@
 require_relative 'instructors'
 require_relative 'high_five'
 
-PERFORMANCE_RATING = 80
-
 class ApprenticeTeacher < Instructor
+
+PERFORMANCE_RATING = 80
 
 include HighFive
   attr_reader :age, :salary, :phase, :target_raise
@@ -19,18 +19,6 @@ include HighFive
     response += "Listen, class, this is how everything works. "
     response += "*drops crazy knowledge bomb* "
     response += "... You're welcome."
-    response
-  end
-
-# I wanted to move this off to Instructors but it broke with constants
-  def set_performance_rating(rating)
-    response = ""
-    if rating > 80
-      response = "Yay, I'm a great employee!"
-      receive_raise(@target_raise)
-    else
-      response = "Oh, well -- thanks to this actionable, specific, and kind feedback, I'll do better next time."
-    end
     response
   end
 

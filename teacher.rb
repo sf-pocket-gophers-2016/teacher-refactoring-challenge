@@ -1,9 +1,11 @@
 require_relative 'instructors'
 require_relative 'high_five'
 
-PERFORMANCE_RATING = 90
+
 
 class Teacher < Instructor
+
+PERFORMANCE_RATING = 90
 
 include HighFive
 
@@ -23,14 +25,4 @@ include HighFive
     response
   end
 
-  def set_performance_rating(rating)
-    response = ""
-    if rating > 90
-      receive_raise(@target_raise)
-      response = "Yay, I'm a great employee!"
-    else
-      response += "Oh, well -- thanks to this actionable, specific, and kind feedback, I'll do better next time."
-    end
-    response
-  end
 end
