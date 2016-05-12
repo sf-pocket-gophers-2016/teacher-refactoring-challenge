@@ -37,12 +37,12 @@ describe ApprenticeTeacher do
     end
 
     it "changes the phase" do
-      rey.set_phase(1)
+      rey.set_phase_teacher(1)
       expect(rey.phase).to be(1)
     end
 
     it "responds with enthusiasm" do
-      response = rey.set_phase(1)
+      response = rey.set_phase_teacher(1)
       expect(response).to eq("Cool, I've always wanted to teach phase 1!")
     end
   end
