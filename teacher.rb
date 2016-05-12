@@ -1,6 +1,6 @@
-class Teacher
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
-  attr_accessor :name
+require_relative 'refactor'
+class Teacher < People
+  attr_reader :salary,:performance_rating, :target_raise
 
   def initialize(options={})
     @phase = 3

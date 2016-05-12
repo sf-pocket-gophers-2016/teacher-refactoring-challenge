@@ -1,6 +1,5 @@
-class Student
-  attr_reader :age, :phase
-  attr_accessor :name
+require_relative 'refactor'
+class Student < People
 
   def initialize(options = {})
     @phase = 1
