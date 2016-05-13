@@ -1,13 +1,11 @@
-class Staff
+require_relative 'person'
+class Staff < Person
 
-  attr_reader :age, :phase
-  attr_accessor :name
+  attr_reader :phase, :salary, :target_raise
 
   def initialize(options={})
     @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
-
+    super
   end
 
   def set_phase(num)
@@ -28,15 +26,14 @@ class Staff
 
 
     if self.class == ApprenticeTeacher
-      performance_rating = 90
+      performance_rating_threshold = 80
     elsif self.class == Teacher
-        performance_rating = 80
+      performance_rating_threshold = 90
     end
 
     response = ""
     # if performance_rating > rating
-    if performance_rating > rating
-
+    if performance_rating_threshold < rating
       receive_raise(self.target_raise)
       response = "Yay, I'm a great employee!"
     else
@@ -44,6 +41,10 @@ class Staff
       response += "feedback, I'll do better next time."
     end
     response
+  end
+
+  def teach_stuff
+    self.class::TEACHING_MSG
   end
 
 end
